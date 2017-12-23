@@ -1,0 +1,104 @@
+[
+   {
+      "Meat":[
+         "Chicken",
+         "Turkey",
+         "Beef",
+         "Ham",
+         "Pork",
+         "Lamb",
+         "Goat",
+         "Veal",
+         "Susage"
+      ]
+   },
+   {
+      "Fruits":[
+         "Apple",
+         "Orange",
+         "Pear",
+         "Banana",
+         "Grapes",
+         "Plums",
+         "Peach",
+         "Kiwi",
+         "Cherries",
+         "Blueberries",
+         "Strawberries",
+         "Blackberries",
+         "Watermelon",
+         "Pineapple"
+      ]
+   },
+   {
+      "Vegies":[
+         "Asparagus",
+         "Tomatoes",
+         "Potatoes",
+         "Spinach",
+         "Squash",
+         "Zucchini",
+         "Peppers",
+         "Mushrooms",
+         "Broccoli",
+         "Cauliflower",
+         "Carrots",
+         "Cucumbers",
+         "Celery",
+         "Lettuce/Greens",
+         "Corn"
+      ]
+   },
+   {
+      "Cheese":[
+         "Bleu cheese",
+         "Cheddar",
+         "Cottage cheese",
+         "Cream cheese",
+         "Feta",
+         "Goat cheese",
+         "Mozzarella",
+         "Parmesan",
+         "Provolone",
+         "Ricotta",
+         "Sandwich slices",
+         "Swiss"
+      ]
+   },
+   {
+      "Dairy":[
+         "Milk",
+         "Yogurt",
+         "Butter",
+         "Margarine",
+         "Half & Half",
+         "Sour cream",
+         "Whipped cream"
+      ]
+   },
+   {
+      "Seafood":[
+         "Crab",
+         "Catfish",
+         "Salmon",
+         "Shrimp",
+         "Tilapia",
+         "Tuna",
+         "Lobster",
+         "Mussels",
+         "Oysters"
+      ]
+   },
+   {
+      "Baking":[
+         "Baking powder",
+         "Baking soda",
+         "Cake mix",
+         "Brownie mix",
+         "Flour",
+         "Shortening",
+         "Sugar",
+         "Yeast"
+      ]
+   }
+]
