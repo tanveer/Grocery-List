@@ -12,7 +12,6 @@ import RealmSwift
 @objcMembers class Item: Object {
 
     dynamic var name: String = ""
-    dynamic var type: Type?
 
     override static func primaryKey() -> String? {
         return "name"

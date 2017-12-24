@@ -7,5 +7,5 @@ target 'Grocery' do
 
   # Pods for Grocery
   pod 'RealmSwift'
-
+  pod 'ObjectMapper'
 end

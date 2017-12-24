@@ -9,11 +9,6 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="AvenirNext.ttc">
-            <string>AvenirNext-Medium</string>
-        </array>
-    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -25,21 +20,30 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zrc-Of-jHS">
-                        <rect key="frame" x="20" y="7" width="280" height="27.5"/>
-                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <rect key="frame" x="20" y="7" width="45" height="26"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpU-B1-IYn">
+                        <rect key="frame" x="263.5" y="11" width="40.5" height="19.5"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                        <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
+                    <constraint firstItem="fpU-B1-IYn" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="7F4-dL-tuT"/>
                     <constraint firstItem="zrc-Of-jHS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="7" id="BGu-8s-ZMy"/>
                     <constraint firstItem="zrc-Of-jHS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="GKw-Tz-wTa"/>
-                    <constraint firstAttribute="trailing" secondItem="zrc-Of-jHS" secondAttribute="trailing" constant="20" id="M9C-5Q-uvw"/>
+                    <constraint firstAttribute="trailing" secondItem="fpU-B1-IYn" secondAttribute="trailing" constant="16" id="IAJ-mf-m5p"/>
+                    <constraint firstItem="fpU-B1-IYn" firstAttribute="centerY" secondItem="zrc-Of-jHS" secondAttribute="centerY" id="eiM-ME-JFG"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="addedLabel" destination="fpU-B1-IYn" id="NOt-gf-gJ5"/>
                 <outlet property="itemLabel" destination="zrc-Of-jHS" id="quq-fI-BzC"/>
             </connections>
         </tableViewCell>

@@ -1,104 +1,120 @@
-[
-   {
-      "Meat":[
-         "Chicken",
-         "Turkey",
-         "Beef",
-         "Ham",
-         "Pork",
-         "Lamb",
-         "Goat",
-         "Veal",
-         "Susage"
-      ]
-   },
-   {
-      "Fruits":[
-         "Apple",
-         "Orange",
-         "Pear",
-         "Banana",
-         "Grapes",
-         "Plums",
-         "Peach",
-         "Kiwi",
-         "Cherries",
-         "Blueberries",
-         "Strawberries",
-         "Blackberries",
-         "Watermelon",
-         "Pineapple"
-      ]
-   },
-   {
-      "Vegies":[
-         "Asparagus",
-         "Tomatoes",
-         "Potatoes",
-         "Spinach",
-         "Squash",
-         "Zucchini",
-         "Peppers",
-         "Mushrooms",
-         "Broccoli",
-         "Cauliflower",
-         "Carrots",
-         "Cucumbers",
-         "Celery",
-         "Lettuce/Greens",
-         "Corn"
-      ]
-   },
-   {
-      "Cheese":[
-         "Bleu cheese",
-         "Cheddar",
-         "Cottage cheese",
-         "Cream cheese",
-         "Feta",
-         "Goat cheese",
-         "Mozzarella",
-         "Parmesan",
-         "Provolone",
-         "Ricotta",
-         "Sandwich slices",
-         "Swiss"
-      ]
-   },
-   {
-      "Dairy":[
-         "Milk",
-         "Yogurt",
-         "Butter",
-         "Margarine",
-         "Half & Half",
-         "Sour cream",
-         "Whipped cream"
-      ]
-   },
-   {
-      "Seafood":[
-         "Crab",
-         "Catfish",
-         "Salmon",
-         "Shrimp",
-         "Tilapia",
-         "Tuna",
-         "Lobster",
-         "Mussels",
-         "Oysters"
-      ]
-   },
-   {
-      "Baking":[
-         "Baking powder",
-         "Baking soda",
-         "Cake mix",
-         "Brownie mix",
-         "Flour",
-         "Shortening",
-         "Sugar",
-         "Yeast"
-      ]
-   }
-]
+{
+   "results":[
+      {
+         "items":[
+            "Chicken",
+            "Turkey",
+            "Beef",
+            "Ham",
+            "Pork",
+            "Lamb",
+            "Goat",
+            "Veal",
+            "Susage"
+         ],
+         "type":"meat",
+         "id":1
+      },
+      {
+         "items":[
+            "Apple",
+            "Orange",
+            "Pear",
+            "Banana",
+            "Grapes",
+            "Plums",
+            "Peach",
+            "Kiwi",
+            "Cherries",
+            "Blueberries",
+            "Strawberries",
+            "Blackberries",
+            "Watermelon",
+            "Pineapple"
+         ],
+         "type":"fruits",
+         "id":2
+      },
+      {
+         "items":[
+            "Asparagus",
+            "Tomatoes",
+            "Potatoes",
+            "Spinach",
+            "Squash",
+            "Zucchini",
+            "Peppers",
+            "Mushrooms",
+            "Broccoli",
+            "Cauliflower",
+            "Carrots",
+            "Cucumbers",
+            "Celery",
+            "Lettuce/Greens",
+            "Corn"
+         ],
+         "type":"vegies",
+         "id":3
+      },
+      {
+         "items":[
+            "Bleu cheese",
+            "Cheddar",
+            "Cottage cheese",
+            "Cream cheese",
+            "Feta",
+            "Goat cheese",
+            "Mozzarella",
+            "Parmesan",
+            "Provolone",
+            "Ricotta",
+            "Sandwich slices",
+            "Swiss"
+         ],
+         "type":"cheese",
+         "id":4
+      },
+      {
+         "items":[
+            "Milk",
+            "Yogurt",
+            "Butter",
+            "Margarine",
+            "Half & Half",
+            "Sour cream",
+            "Whipped cream"
+         ],
+         "type":"dairy",
+         "id":5
+      },
+      {
+         "items":[
+            "Crab",
+            "Catfish",
+            "Salmon",
+            "Shrimp",
+            "Tilapia",
+            "Tuna",
+            "Lobster",
+            "Mussels",
+            "Oysters"
+         ],
+         "type":"seafood",
+         "id":6
+      },
+      {
+         "items":[
+            "Baking powder",
+            "Baking soda",
+            "Cake mix",
+            "Brownie mix",
+            "Flour",
+            "Shortening",
+            "Sugar",
+            "Yeast"
+         ],
+         "type":"baking",
+         "id":7
+      }
+   ]
+}

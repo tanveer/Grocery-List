@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		AC4F72F5EE9778D5D86C6729 /* Pods_Grocery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACA7776F26D2529392375E3 /* Pods_Grocery.framework */; };
+		E21D32461FEF554300BFB59D /* GroceryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21D32451FEF554300BFB59D /* GroceryItem.swift */; };
+		E21D32481FEF602800BFB59D /* GroceryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21D32471FEF602800BFB59D /* GroceryList.swift */; };
 		E23205FB1FEC91F100E91C50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23205FA1FEC91F100E91C50 /* AppDelegate.swift */; };
 		E23205FD1FEC91F100E91C50 /* GroceryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23205FC1FEC91F100E91C50 /* GroceryTableViewController.swift */; };
 		E23206001FEC91F100E91C50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E23205FE1FEC91F100E91C50 /* Main.storyboard */; };
@@ -15,12 +17,10 @@
 		E23206051FEC91F100E91C50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E23206031FEC91F100E91C50 /* LaunchScreen.storyboard */; };
 		E23206121FEC92D300E91C50 /* Realm+Grocery.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23206111FEC92D300E91C50 /* Realm+Grocery.swift */; };
 		E23206141FEC977900E91C50 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23206131FEC977900E91C50 /* Item.swift */; };
-		E23206161FEC9A0300E91C50 /* Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23206151FEC9A0300E91C50 /* Type.swift */; };
 		E23206191FEC9B4100E91C50 /* GroceryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23206171FEC9B4100E91C50 /* GroceryCell.swift */; };
 		E232061A1FEC9B4100E91C50 /* GroceryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E23206181FEC9B4100E91C50 /* GroceryCell.xib */; };
 		E232061C1FEC9EB900E91C50 /* GroceryTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E232061B1FEC9EB900E91C50 /* GroceryTextField.swift */; };
 		E232061E1FECA2F700E91C50 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E232061D1FECA2F700E91C50 /* AddItemViewController.swift */; };
-		E23206201FECACD000E91C50 /* TypePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E232061F1FECACD000E91C50 /* TypePickerView.swift */; };
 		E23206221FEDD4CA00E91C50 /* groceryData.json in Resources */ = {isa = PBXBuildFile; fileRef = E23206211FEDD4CA00E91C50 /* groceryData.json */; };
 		E23206241FEDD97500E91C50 /* Grocery.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23206231FEDD97500E91C50 /* Grocery.swift */; };
 		E23206271FEDFC7D00E91C50 /* GroceryItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23206251FEDFC7D00E91C50 /* GroceryItemCell.swift */; };
@@ -31,6 +31,8 @@
 		437BD4AB1813EFE8CE2F9CEF /* Pods-Grocery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grocery.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Grocery/Pods-Grocery.debug.xcconfig"; sourceTree = "<group>"; };
 		8ABD3D03A0AA98A16D2FB539 /* Pods-Grocery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grocery.release.xcconfig"; path = "Pods/Target Support Files/Pods-Grocery/Pods-Grocery.release.xcconfig"; sourceTree = "<group>"; };
 		AACA7776F26D2529392375E3 /* Pods_Grocery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Grocery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E21D32451FEF554300BFB59D /* GroceryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryItem.swift; sourceTree = "<group>"; };
+		E21D32471FEF602800BFB59D /* GroceryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryList.swift; sourceTree = "<group>"; };
 		E23205F71FEC91F100E91C50 /* Grocery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Grocery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E23205FA1FEC91F100E91C50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E23205FC1FEC91F100E91C50 /* GroceryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryTableViewController.swift; sourceTree = "<group>"; };
@@ -40,12 +42,10 @@
 		E23206061FEC91F100E91C50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E23206111FEC92D300E91C50 /* Realm+Grocery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Realm+Grocery.swift"; sourceTree = "<group>"; };
 		E23206131FEC977900E91C50 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
-		E23206151FEC9A0300E91C50 /* Type.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Type.swift; sourceTree = "<group>"; };
 		E23206171FEC9B4100E91C50 /* GroceryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryCell.swift; sourceTree = "<group>"; };
 		E23206181FEC9B4100E91C50 /* GroceryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroceryCell.xib; sourceTree = "<group>"; };
 		E232061B1FEC9EB900E91C50 /* GroceryTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryTextField.swift; sourceTree = "<group>"; };
 		E232061D1FECA2F700E91C50 /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
-		E232061F1FECACD000E91C50 /* TypePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypePickerView.swift; sourceTree = "<group>"; };
 		E23206211FEDD4CA00E91C50 /* groceryData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = groceryData.json; sourceTree = SOURCE_ROOT; };
 		E23206231FEDD97500E91C50 /* Grocery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grocery.swift; sourceTree = "<group>"; };
 		E23206251FEDFC7D00E91C50 /* GroceryItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryItemCell.swift; sourceTree = "<group>"; };
@@ -137,7 +137,6 @@
 			children = (
 				E23206171FEC9B4100E91C50 /* GroceryCell.swift */,
 				E23206181FEC9B4100E91C50 /* GroceryCell.xib */,
-				E232061F1FECACD000E91C50 /* TypePickerView.swift */,
 				E23206251FEDFC7D00E91C50 /* GroceryItemCell.swift */,
 				E23206261FEDFC7D00E91C50 /* GroceryItemCell.xib */,
 			);
@@ -148,8 +147,9 @@
 			isa = PBXGroup;
 			children = (
 				E23206131FEC977900E91C50 /* Item.swift */,
-				E23206151FEC9A0300E91C50 /* Type.swift */,
 				E23206231FEDD97500E91C50 /* Grocery.swift */,
+				E21D32451FEF554300BFB59D /* GroceryItem.swift */,
+				E21D32471FEF602800BFB59D /* GroceryList.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -291,11 +291,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E232061C1FEC9EB900E91C50 /* GroceryTextField.swift in Sources */,
-				E23206161FEC9A0300E91C50 /* Type.swift in Sources */,
+				E21D32461FEF554300BFB59D /* GroceryItem.swift in Sources */,
 				E23206271FEDFC7D00E91C50 /* GroceryItemCell.swift in Sources */,
 				E23206191FEC9B4100E91C50 /* GroceryCell.swift in Sources */,
+				E21D32481FEF602800BFB59D /* GroceryList.swift in Sources */,
 				E23206141FEC977900E91C50 /* Item.swift in Sources */,
-				E23206201FECACD000E91C50 /* TypePickerView.swift in Sources */,
 				E23205FD1FEC91F100E91C50 /* GroceryTableViewController.swift in Sources */,
 				E232061E1FECA2F700E91C50 /* AddItemViewController.swift in Sources */,
 				E23205FB1FEC91F100E91C50 /* AppDelegate.swift in Sources */,

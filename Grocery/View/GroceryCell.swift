@@ -9,7 +9,6 @@
 import UIKit
 
 class GroceryCell: UITableViewCell {
-
     var item: String? {
         didSet{
             if let item = item {
@@ -17,8 +16,8 @@ class GroceryCell: UITableViewCell {
             }
         }
     }
+    
     @IBOutlet weak var itemLabel: UILabel!
-
 }
 
 extension GroceryCell {

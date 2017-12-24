@@ -7,20 +7,36 @@
 //
 
 import UIKit
+import RealmSwift
 
 class GroceryItemCell: UITableViewCell {
+    private var objects: Results<Item>!
     var item: String? {
         didSet{
             updateUi()
         }
     }
-
+    
     @IBOutlet private weak var itemLabel: UILabel!
+    @IBOutlet weak var addedLabel: UILabel!
 
     private func updateUi() {
+        objects = RealmData.realm.objects(Item.self)
+        for object in objects {
+            if object.name == item {
+                self.accessoryType = object.name == item ? .checkmark : .none
+                self.item = object.name
+                self.addedLabel.text = ""
+            }
+        }
+
         if let item = self.item {
             itemLabel.text = item
         }
+    }
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
     }
 }
 

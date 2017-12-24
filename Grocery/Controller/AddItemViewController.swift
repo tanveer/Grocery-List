@@ -10,10 +10,8 @@ import UIKit
 import RealmSwift
 
 class AddItemViewController: UIViewController {
-    private var items: [String] = []
+    private var grocery: GroceryItem!
     private var objects: Results<Item>!
-    private let sections = ["Meat", "Vegies", "Fruits", "Cheese", "Dairy", "Seafood", "Baking"]
-
     @IBOutlet private weak var tableView: UITableView!{
         didSet {
             tableView.delegate = self
@@ -25,6 +23,10 @@ class AddItemViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        Grocery.readJson { groceyItem in
+            self.grocery = groceyItem
+            self.tableView.reloadData()
+        }
         objects = RealmData.realm.objects(Item.self)
     }
 }
@@ -32,20 +34,21 @@ class AddItemViewController: UIViewController {
 extension AddItemViewController: UITableViewDataSource {
 
     func numberOfSections(in tableView: UITableView) -> Int {
-        return sections.count
+        return grocery.groceryList.count
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Grocery.data(for: sections[section]).count
+        return  grocery.groceryList[section].items.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: GroceryItemCell.id, for: indexPath) as! GroceryItemCell
-        let item = Grocery.data(for: sections[indexPath.section])[indexPath.row]
+        let section = indexPath.section
+        let item = grocery.groceryList[section].items[indexPath.row]
         for object in objects {
             if object.name == item {
                 cell.accessoryType = object.name == item ? .checkmark : .none
-                cell.item = item
+                cell.item = item + " " + "'Added'"
                 return cell
             }
         }
@@ -55,14 +58,14 @@ extension AddItemViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return sections[section]
+        return grocery.groceryList[section].type.uppercased()
     }
 }
 
 extension AddItemViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let item = Grocery.data(for: sections[indexPath.section])[indexPath.row]
+        let item = grocery.groceryList[indexPath.section].items[indexPath.row]
         let cell = tableView.cellForRow(at: indexPath) as! GroceryItemCell
         if RealmData.realm.object(ofType: Item.self, forPrimaryKey: item) == nil {
             tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
