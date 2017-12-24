@@ -11,6 +11,9 @@ import Foundation
 import ObjectMapper
 
 class GroceryItem: Mappable {
+
+    var isExpanded: Bool = false
+    
     var groceryList: [GroceryList]!
 
     required init?(map: Map) {}
