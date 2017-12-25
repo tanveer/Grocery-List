@@ -13,48 +13,119 @@
             "Susage"
          ],
          "type":"meat",
-         "id":1
+         "id": 1
       },
       {
          "items":[
-            "Apple",
-            "Orange",
-            "Pear",
-            "Banana",
-            "Grapes",
-            "Plums",
-            "Peach",
-            "Kiwi",
-            "Cherries",
-            "Blueberries",
-            "Strawberries",
+            "Apples",
+            "Apricots",
+            "Avocados",
+            "Bananas",
             "Blackberries",
-            "Watermelon",
-            "Pineapple"
+            "Blueberries",
+            "Cantelope",
+            "Cherries",
+            "Cranberries",
+            "Dates / Figs",
+            "Grapes",
+            "Grapefruit",
+            "Guava",
+            "Honeydew / Muskmelon",
+            "Kiwis",
+            "Kumquats",
+            "Lemons",
+            "Limes",
+            "Lychee",
+            "Mango",
+            "Mangosteen",
+            "Nectarines",
+            "Oranges",
+            "Papaya",
+            "Peaches",
+            "Pears",
+            "Pineapple",
+            "Plantains",
+            "Plums",
+            "Pomegranate",
+            "Quince",
+            "Raspberries",
+            "Rhubarb",
+            "Strawberries",
+            "Watermelon"
          ],
          "type":"fruits",
-         "id":2
+         "id": 2
       },
       {
          "items":[
+            "Artichoke",
+            "Arugula",
             "Asparagus",
-            "Tomatoes",
-            "Potatoes",
-            "Spinach",
-            "Squash",
-            "Zucchini",
-            "Peppers",
-            "Mushrooms",
+            "Avocado",
+            "Beets",
+            "Green peppers",
+            "Bok choy",
             "Broccoli",
+            "Brussels sprouts",
+            "Cabbage",
+            "Cassava",
             "Cauliflower",
-            "Carrots",
-            "Cucumbers",
             "Celery",
-            "Lettuce/Greens",
-            "Corn"
+            "Chard",
+            "Collard greens",
+            "Corn",
+            "Crisphead lettuce",
+            "Cucumber",
+            "Daikon",
+            "Eggplant",
+            "Endive",
+            "Garlic",
+            "Ginger",
+            "Hot peppers",
+            "Jicama",
+            "Kale",
+            "Kohlrabi",
+            "Leaf lettuce",
+            "Mushrooms",
+            "Nopales",
+            "Okra",
+            "Onions",
+            "Peas",
+            "Potatoes",
+            "Radishes",
+            "Radicchio",
+            "Romaine lettuce",
+            "Shallots / Leeks",
+            "Spinach",
+            "Sprouts",
+            "Squash",
+            "Sweet potatoes",
+            "Taro",
+            "Tomatillo",
+            "Tomatoes",
+            "Turnips / Parsnips",
+            "Water chestnuts",
+            "Watercress",
+            "Zucchini"
          ],
          "type":"vegies",
-         "id":3
+         "id": 3
+      },
+      {
+        "items": [
+            "Beer",
+            "Club soda / Tonic",
+            "Electrolyte water",
+            "Juices",
+            "Kombucha",
+            "Liquor",
+            "Mixers",
+            "Soda pop",
+            "Sports drink",
+            "Wine"
+          ],
+          "type": "beverage",
+          "id": 4
       },
       {
          "items":[
@@ -72,7 +143,7 @@
             "Swiss"
          ],
          "type":"cheese",
-         "id":4
+         "id": 5
       },
       {
          "items":[
@@ -85,7 +156,7 @@
             "Whipped cream"
          ],
          "type":"dairy",
-         "id":5
+         "id": 6
       },
       {
          "items":[
@@ -100,7 +171,7 @@
             "Oysters"
          ],
          "type":"seafood",
-         "id":6
+         "id": 7
       },
       {
          "items":[
@@ -114,7 +185,88 @@
             "Yeast"
          ],
          "type":"baking",
-         "id":7
+         "id": 8
+      },
+      {
+        "items": [
+          "Black beans",
+          "Black-eyed peas",
+          "Chickpeas",
+          "Edamame",
+          "Fava beans",
+          "Kidney beans",
+          "Lentils",
+          "Lima beans",
+          "Mung beans",
+          "Navy beans",
+          "Pinto beans",
+          "Red beans",
+          "Split peas",
+          "White beans"
+        ],
+        "type": "beans",
+        "id": 9
+      },
+      {
+        "items": [
+          "Amaranth",
+          "Barley",
+          "Brown rice",
+          "Buckwheat",
+          "Bulgar",
+          "Cornmeal",
+          "Couscous",
+          "Millet",
+          "Oatmeal",
+          "Quinoa",
+          "Sorghum",
+          "Wheat gluten",
+          "White rice",
+          "Wild rice"
+        ],
+        "type": "grains",
+        "id": 10
+      },
+      {
+        "items": [
+          "Allspice",
+          "Anise",
+          "Bay leaf",
+          "Basil",
+          "Black pepper",
+          "Cayenne pepper",
+          "Celery seed",
+          "Chives",
+          "Chili powder",
+          "Cilantro",
+          "Cinnamon",
+          "Clove",
+          "Coriander",
+          "Cumin",
+          "Dill",
+          "Fennel",
+          "Garlic",
+          "Lavender",
+          "Lemongrass",
+          "Marjoram",
+          "Nutmeg",
+          "Oregano",
+          "Paprika",
+          "Parsley",
+          "Peppermint",
+          "Poppy seed",
+          "Red pepper",
+          "Rosemary",
+          "Saffron",
+          "Sage",
+          "Spearmint",
+          "Tarragon",
+          "Thyme",
+          "Tumeric",
+          "Vanilla"
+        ],
+        "type": "herbs",
+        "id": 11
       }
    ]
 }
