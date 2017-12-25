@@ -10,6 +10,9 @@ import UIKit
 import RealmSwift
 
 class AddItemViewController: UIViewController {
+
+    var buttonToggleDelegate: ButtonToggleDelegate?
+
     private var grocery: GroceryItem!
     private var objects: Results<Item>!
 
@@ -98,7 +101,7 @@ extension AddItemViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: HeaderView.id) as? HeaderView {
-            headerView.button.addTarget(self, action: #selector(expandCloseSection), for: .touchUpInside)
+            headerView.button.addTarget(self, action: #selector(expandCloseSection(button:)), for: .touchUpInside)
             return headerView.sectionHeaderViewWithText(grocery.groceryList[section].type, section: section)
         }
         else {

@@ -40,28 +40,23 @@ class HeaderView: UITableViewHeaderFooterView {
     }()
 
     func sectionHeaderViewWithText(_ text: String, section: Int) -> UIView {
-        self.button.tag = section
-        self.titleLabel.text = text.uppercased()
+            button.tag = section
+        if  let nibView = Bundle.main.loadNibNamed(HeaderViewNib.id, owner: self, options: nil)?.first as? HeaderViewNib {
+            nibView.titleLabel.text = text.uppercased()
+            nibView.addSubview(button)
+            contentView.addSubview(nibView)
 
-        // add subviews to contentView
-        contentView.addSubview(dividerView)
-        contentView.addSubview(titleLabel)
-        contentView.addSubview(button)
+            button.widthAnchor.constraint(equalToConstant: 60).isActive = true
+            button.trailingAnchor.constraint(equalTo: nibView.trailingAnchor, constant: 0).isActive = true
+            button.topAnchor.constraint(equalTo: nibView.topAnchor, constant: 8).isActive = true
+            button.bottomAnchor.constraint(equalTo: nibView.bottomAnchor, constant: 0).isActive = true
 
-        // set constraint for subviews
-        button.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20).isActive = true
-        button.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 0).isActive = true
-        button.bottomAnchor.constraint(equalTo: dividerView.topAnchor, constant: 0).isActive = true
-
-        titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20).isActive = true
-        titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 0).isActive = true
-        titleLabel.bottomAnchor.constraint(equalTo: dividerView.topAnchor, constant: 0).isActive = true
-
-        dividerView.heightAnchor.constraint(equalToConstant: 2).isActive = true
-        dividerView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 0).isActive = true
-        dividerView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 0).isActive = true
-        dividerView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 0).isActive = true
-        contentView.backgroundColor = #colorLiteral(red: 0.2549019608, green: 0.231372549, blue: 0.231372549, alpha: 1)
+            nibView.translatesAutoresizingMaskIntoConstraints = false
+            nibView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 0).isActive = true
+            nibView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 0).isActive = true
+            nibView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 0).isActive = true
+            nibView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 0).isActive = true
+        }
         return contentView
     }
 }
