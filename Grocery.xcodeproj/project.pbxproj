@@ -10,6 +10,7 @@
 		AC4F72F5EE9778D5D86C6729 /* Pods_Grocery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACA7776F26D2529392375E3 /* Pods_Grocery.framework */; };
 		E21D32461FEF554300BFB59D /* GroceryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21D32451FEF554300BFB59D /* GroceryItem.swift */; };
 		E21D32481FEF602800BFB59D /* GroceryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21D32471FEF602800BFB59D /* GroceryList.swift */; };
+		E21D325C1FF0D60E00BFB59D /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21D325B1FF0D60E00BFB59D /* HeaderView.swift */; };
 		E23205FB1FEC91F100E91C50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23205FA1FEC91F100E91C50 /* AppDelegate.swift */; };
 		E23205FD1FEC91F100E91C50 /* GroceryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23205FC1FEC91F100E91C50 /* GroceryTableViewController.swift */; };
 		E23206001FEC91F100E91C50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E23205FE1FEC91F100E91C50 /* Main.storyboard */; };
@@ -33,6 +34,7 @@
 		AACA7776F26D2529392375E3 /* Pods_Grocery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Grocery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E21D32451FEF554300BFB59D /* GroceryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryItem.swift; sourceTree = "<group>"; };
 		E21D32471FEF602800BFB59D /* GroceryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryList.swift; sourceTree = "<group>"; };
+		E21D325B1FF0D60E00BFB59D /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		E23205F71FEC91F100E91C50 /* Grocery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Grocery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E23205FA1FEC91F100E91C50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E23205FC1FEC91F100E91C50 /* GroceryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryTableViewController.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				E23206181FEC9B4100E91C50 /* GroceryCell.xib */,
 				E23206251FEDFC7D00E91C50 /* GroceryItemCell.swift */,
 				E23206261FEDFC7D00E91C50 /* GroceryItemCell.xib */,
+				E21D325B1FF0D60E00BFB59D /* HeaderView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				E21D32481FEF602800BFB59D /* GroceryList.swift in Sources */,
 				E23206141FEC977900E91C50 /* Item.swift in Sources */,
 				E23205FD1FEC91F100E91C50 /* GroceryTableViewController.swift in Sources */,
+				E21D325C1FF0D60E00BFB59D /* HeaderView.swift in Sources */,
 				E232061E1FECA2F700E91C50 /* AddItemViewController.swift in Sources */,
 				E23205FB1FEC91F100E91C50 /* AppDelegate.swift in Sources */,
 				E23206121FEC92D300E91C50 /* Realm+Grocery.swift in Sources */,
