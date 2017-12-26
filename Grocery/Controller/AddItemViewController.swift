@@ -10,6 +10,9 @@ import UIKit
 import RealmSwift
 
 class AddItemViewController: UIViewController {
+
+    var buttonToggleDelegate: ButtonToggleDelegate?
+
     private var grocery: GroceryItem!
     private var objects: Results<Item>!
 
@@ -18,6 +21,7 @@ class AddItemViewController: UIViewController {
             tableView.delegate = self
             tableView.dataSource = self
             tableView.register(GroceryItemCell.nib, forCellReuseIdentifier: GroceryItemCell.id)
+            tableView.register(HeaderView.self, forHeaderFooterViewReuseIdentifier: HeaderView.id)
         }
     }
 
@@ -42,52 +46,6 @@ class AddItemViewController: UIViewController {
             tableView.deleteRows(at: indexPaths, with: .fade)
         }
     }
-
-    private func sectionHeaderViewWithText(_ text: String, section: Int) -> UIView {
-        let dividerView = UIView()
-        let button = UIButton(type: .system)
-        let view = UIView()
-        let label = UILabel()
-
-        dividerView.translatesAutoresizingMaskIntoConstraints = false
-        dividerView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitleColor(.white, for: .normal)
-        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 24)
-        button.setTitle("\u{2261}", for: .normal)
-        button.tag = section
-//        button.setImage(UIImage(named: "up-arrow"), for: .normal)
-        button.addTarget(self, action: #selector(expandCloseSection), for: .touchUpInside)
-
-        // section title label
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textAlignment = .left
-        label.textColor = .white
-        label.font = UIFont.boldSystemFont(ofSize: 20)
-        label.text = text.uppercased()
-
-        // view
-        view.addSubview(dividerView)
-        view.addSubview(label)
-        view.addSubview(button)
-
-        button.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
-        button.topAnchor.constraint(equalTo: view.topAnchor, constant: 0).isActive = true
-        button.bottomAnchor.constraint(equalTo: dividerView.topAnchor, constant: 0).isActive = true
-
-        label.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
-        label.topAnchor.constraint(equalTo: view.topAnchor, constant: 0).isActive = true
-        label.bottomAnchor.constraint(equalTo: dividerView.topAnchor, constant: 0).isActive = true
-
-        dividerView.heightAnchor.constraint(equalToConstant: 2).isActive = true
-        dividerView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
-        dividerView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0).isActive = true
-        dividerView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0).isActive = true
-        view.backgroundColor = #colorLiteral(red: 0.2549019608, green: 0.231372549, blue: 0.231372549, alpha: 1)
-        return view
-    }
-
 }
 
 extension AddItemViewController: UITableViewDataSource {
@@ -142,6 +100,12 @@ extension AddItemViewController: UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        return sectionHeaderViewWithText(grocery.groceryList[section].type.uppercased(), section: section)
+        if let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: HeaderView.id) as? HeaderView {
+            headerView.button.addTarget(self, action: #selector(expandCloseSection(button:)), for: .touchUpInside)
+            return headerView.sectionHeaderViewWithText(grocery.groceryList[section].type, section: section)
+        }
+        else {
+            return UIView()
+        }
     }
 }

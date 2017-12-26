@@ -24,6 +24,7 @@ class GroceryTableViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        title = "Grocery List"
         items = RealmData.realm.objects(Item.self)
     }
 
