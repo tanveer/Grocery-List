@@ -28,7 +28,7 @@ class AddItemViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        Grocery.readJson { groceyItem in
+        API.readJson { groceyItem in
             self.grocery = groceyItem
             self.tableView.reloadData()
         }

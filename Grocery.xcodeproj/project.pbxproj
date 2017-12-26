@@ -15,6 +15,7 @@
 		E21D32601FF17DD900BFB59D /* HeaderViewNib.xib in Resources */ = {isa = PBXBuildFile; fileRef = E21D325F1FF17DD900BFB59D /* HeaderViewNib.xib */; };
 		E21D32621FF17E2000BFB59D /* HeaderViewNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21D32611FF17E2000BFB59D /* HeaderViewNib.swift */; };
 		E21D32781FF1C1DA00BFB59D /* blure.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E21D32771FF1C1DA00BFB59D /* blure.jpg */; };
+		E21D327A1FF1D29300BFB59D /* NSAttributedString+Grocery.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21D32791FF1D29300BFB59D /* NSAttributedString+Grocery.swift */; };
 		E23205FB1FEC91F100E91C50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23205FA1FEC91F100E91C50 /* AppDelegate.swift */; };
 		E23205FD1FEC91F100E91C50 /* GroceryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23205FC1FEC91F100E91C50 /* GroceryTableViewController.swift */; };
 		E23206001FEC91F100E91C50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E23205FE1FEC91F100E91C50 /* Main.storyboard */; };
@@ -27,7 +28,7 @@
 		E232061C1FEC9EB900E91C50 /* GroceryTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E232061B1FEC9EB900E91C50 /* GroceryTextField.swift */; };
 		E232061E1FECA2F700E91C50 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E232061D1FECA2F700E91C50 /* AddItemViewController.swift */; };
 		E23206221FEDD4CA00E91C50 /* groceryData.json in Resources */ = {isa = PBXBuildFile; fileRef = E23206211FEDD4CA00E91C50 /* groceryData.json */; };
-		E23206241FEDD97500E91C50 /* Grocery.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23206231FEDD97500E91C50 /* Grocery.swift */; };
+		E23206241FEDD97500E91C50 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23206231FEDD97500E91C50 /* API.swift */; };
 		E23206271FEDFC7D00E91C50 /* GroceryItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23206251FEDFC7D00E91C50 /* GroceryItemCell.swift */; };
 		E23206281FEDFC7D00E91C50 /* GroceryItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E23206261FEDFC7D00E91C50 /* GroceryItemCell.xib */; };
 /* End PBXBuildFile section */
@@ -43,6 +44,7 @@
 		E21D325F1FF17DD900BFB59D /* HeaderViewNib.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderViewNib.xib; sourceTree = "<group>"; };
 		E21D32611FF17E2000BFB59D /* HeaderViewNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewNib.swift; sourceTree = "<group>"; };
 		E21D32771FF1C1DA00BFB59D /* blure.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blure.jpg; sourceTree = "<group>"; };
+		E21D32791FF1D29300BFB59D /* NSAttributedString+Grocery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Grocery.swift"; sourceTree = "<group>"; };
 		E23205F71FEC91F100E91C50 /* Grocery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Grocery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E23205FA1FEC91F100E91C50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E23205FC1FEC91F100E91C50 /* GroceryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryTableViewController.swift; sourceTree = "<group>"; };
@@ -57,7 +59,7 @@
 		E232061B1FEC9EB900E91C50 /* GroceryTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryTextField.swift; sourceTree = "<group>"; };
 		E232061D1FECA2F700E91C50 /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
 		E23206211FEDD4CA00E91C50 /* groceryData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = groceryData.json; sourceTree = SOURCE_ROOT; };
-		E23206231FEDD97500E91C50 /* Grocery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grocery.swift; sourceTree = "<group>"; };
+		E23206231FEDD97500E91C50 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		E23206251FEDFC7D00E91C50 /* GroceryItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryItemCell.swift; sourceTree = "<group>"; };
 		E23206261FEDFC7D00E91C50 /* GroceryItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroceryItemCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -160,7 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				E23206131FEC977900E91C50 /* Item.swift */,
-				E23206231FEDD97500E91C50 /* Grocery.swift */,
+				E23206231FEDD97500E91C50 /* API.swift */,
 				E21D32451FEF554300BFB59D /* GroceryItem.swift */,
 				E21D32471FEF602800BFB59D /* GroceryList.swift */,
 			);
@@ -175,6 +177,7 @@
 				E232061B1FEC9EB900E91C50 /* GroceryTextField.swift */,
 				E21D32771FF1C1DA00BFB59D /* blure.jpg */,
 				E21D325D1FF1791500BFB59D /* vegies.jpg */,
+				E21D32791FF1D29300BFB59D /* NSAttributedString+Grocery.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E21D327A1FF1D29300BFB59D /* NSAttributedString+Grocery.swift in Sources */,
 				E232061C1FEC9EB900E91C50 /* GroceryTextField.swift in Sources */,
 				E21D32461FEF554300BFB59D /* GroceryItem.swift in Sources */,
 				E23206271FEDFC7D00E91C50 /* GroceryItemCell.swift in Sources */,
@@ -319,7 +323,7 @@
 				E232061E1FECA2F700E91C50 /* AddItemViewController.swift in Sources */,
 				E23205FB1FEC91F100E91C50 /* AppDelegate.swift in Sources */,
 				E23206121FEC92D300E91C50 /* Realm+Grocery.swift in Sources */,
-				E23206241FEDD97500E91C50 /* Grocery.swift in Sources */,
+				E23206241FEDD97500E91C50 /* API.swift in Sources */,
 				E21D32621FF17E2000BFB59D /* HeaderViewNib.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

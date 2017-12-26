@@ -60,4 +60,10 @@ extension GroceryTableViewController: UITableViewDelegate {
             tableView.reloadData()
         }
     }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath) as! GroceryCell
+        cell.accessoryType = .checkmark
+        cell.itemLabel.attributedText = items[indexPath.row].name.attributedString()
+    }
 }
