@@ -12,10 +12,7 @@ import RealmSwift
 class AddItemViewController: UIViewController {
 
     var buttonToggleDelegate: ButtonToggleDelegate?
-
     private var grocery: GroceryItem!
-    private var objects: Results<Item>!
-
     @IBOutlet private weak var tableView: UITableView!{
         didSet {
             tableView.delegate = self
@@ -32,7 +29,7 @@ class AddItemViewController: UIViewController {
             self.grocery = groceyItem
             self.tableView.reloadData()
         }
-        objects = RealmData.realm.objects(Item.self)
+        results = realm.objects(Item.self)
     }
 
     @objc dynamic private func expandCloseSection(button: UIButton) {
@@ -65,7 +62,7 @@ extension AddItemViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: GroceryItemCell.id, for: indexPath) as! GroceryItemCell
         let section = indexPath.section
         let item = grocery.groceryList[section].items[indexPath.row]
-        for object in objects {
+        for object in results {
             if object.name == item {
                 cell.accessoryType = object.name == item ? .checkmark : .none
                 cell.item = item
@@ -84,11 +81,11 @@ extension AddItemViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let item = grocery.groceryList[indexPath.section].items[indexPath.row]
         let cell = tableView.cellForRow(at: indexPath) as! GroceryItemCell
-        if RealmData.realm.object(ofType: Item.self, forPrimaryKey: item) == nil {
+        if realm.object(ofType: Item.self, forPrimaryKey: item) == nil {
             tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
             RealmData.create(Item(name: item))
         } else if cell.accessoryType == .checkmark {
-            let object = objects.filter { $0.name == item }
+            let object = results.filter { $0.name == item }
             RealmData.delete(object.last!)
             tableView.cellForRow(at: indexPath)?.accessoryType = .none
             tableView.reloadRows(at: [indexPath], with: .automatic)

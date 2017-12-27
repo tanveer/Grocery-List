@@ -16,6 +16,7 @@
 		E21D32621FF17E2000BFB59D /* HeaderViewNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21D32611FF17E2000BFB59D /* HeaderViewNib.swift */; };
 		E21D32781FF1C1DA00BFB59D /* blure.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E21D32771FF1C1DA00BFB59D /* blure.jpg */; };
 		E21D327A1FF1D29300BFB59D /* NSAttributedString+Grocery.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21D32791FF1D29300BFB59D /* NSAttributedString+Grocery.swift */; };
+		E21D327D1FF2B78000BFB59D /* ViewModelItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21D327C1FF2B77F00BFB59D /* ViewModelItem.swift */; };
 		E23205FB1FEC91F100E91C50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23205FA1FEC91F100E91C50 /* AppDelegate.swift */; };
 		E23205FD1FEC91F100E91C50 /* GroceryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23205FC1FEC91F100E91C50 /* GroceryTableViewController.swift */; };
 		E23206001FEC91F100E91C50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E23205FE1FEC91F100E91C50 /* Main.storyboard */; };
@@ -45,6 +46,7 @@
 		E21D32611FF17E2000BFB59D /* HeaderViewNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewNib.swift; sourceTree = "<group>"; };
 		E21D32771FF1C1DA00BFB59D /* blure.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blure.jpg; sourceTree = "<group>"; };
 		E21D32791FF1D29300BFB59D /* NSAttributedString+Grocery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Grocery.swift"; sourceTree = "<group>"; };
+		E21D327C1FF2B77F00BFB59D /* ViewModelItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelItem.swift; sourceTree = "<group>"; };
 		E23205F71FEC91F100E91C50 /* Grocery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Grocery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E23205FA1FEC91F100E91C50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E23205FC1FEC91F100E91C50 /* GroceryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryTableViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +95,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E21D327B1FF2B70E00BFB59D /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				E21D327C1FF2B77F00BFB59D /* ViewModelItem.swift */,
+			);
+			path = MVVM;
+			sourceTree = "<group>";
+		};
 		E23205EE1FEC91F100E91C50 = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +124,7 @@
 		E23205F91FEC91F100E91C50 /* Grocery */ = {
 			isa = PBXGroup;
 			children = (
+				E21D327B1FF2B70E00BFB59D /* MVVM */,
 				E23205FA1FEC91F100E91C50 /* AppDelegate.swift */,
 				E232060F1FEC92A600E91C50 /* Model */,
 				E232060E1FEC929E00E91C50 /* View */,
@@ -312,6 +323,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E21D327A1FF1D29300BFB59D /* NSAttributedString+Grocery.swift in Sources */,
+				E21D327D1FF2B78000BFB59D /* ViewModelItem.swift in Sources */,
 				E232061C1FEC9EB900E91C50 /* GroceryTextField.swift in Sources */,
 				E21D32461FEF554300BFB59D /* GroceryItem.swift in Sources */,
 				E23206271FEDFC7D00E91C50 /* GroceryItemCell.swift in Sources */,

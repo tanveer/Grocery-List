@@ -15,7 +15,6 @@ class GroceryItemCell: UITableViewCell {
             updateUi()
         }
     }
-    
     @IBOutlet private weak var itemLabel: UILabel!
     @IBOutlet weak var addedLabel: UILabel!
 

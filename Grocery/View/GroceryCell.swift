@@ -9,15 +9,20 @@
 import UIKit
 
 class GroceryCell: UITableViewCell {
-    var item: String? {
+    var vmi: ViewModelItem? {
         didSet{
-            if let item = item {
-                itemLabel.text = item 
+            if let vmi = vmi {
+                itemLabel.text = vmi.item.name
             }
         }
     }
     
     @IBOutlet weak var itemLabel: UILabel!
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+        accessoryType = selected ? .checkmark : .none
+    }
 }
 
 extension GroceryCell {

@@ -35,7 +35,7 @@ class HeaderView: UITableViewHeaderFooterView {
     private var dividerView: UIView = {
         let dividerView = UIView()
         dividerView.translatesAutoresizingMaskIntoConstraints = false
-        dividerView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        dividerView.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         return dividerView
     }()
 

@@ -9,6 +9,9 @@
 import UIKit
 import RealmSwift
 
+let realm =  RealmData.realm
+var results: Results<Item>!
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
