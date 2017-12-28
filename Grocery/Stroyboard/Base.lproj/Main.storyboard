@@ -6,15 +6,9 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="HelveticaNeue.ttc">
-            <string>HelveticaNeue-Bold</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Grocery Table View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -28,6 +22,26 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="separatorInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="xUI-bq-PYt">
+                                    <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Yw-m3-uwV">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <state key="normal" title="Clear"/>
+                                            <connections>
+                                                <action selector="clear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dN8-sc-yNH"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="7Yw-m3-uwV" secondAttribute="bottom" id="XPf-nQ-djg"/>
+                                        <constraint firstItem="7Yw-m3-uwV" firstAttribute="leading" secondItem="xUI-bq-PYt" secondAttribute="leading" id="hz0-cw-Ob0"/>
+                                        <constraint firstAttribute="trailing" secondItem="7Yw-m3-uwV" secondAttribute="trailing" id="jH9-lq-OkR"/>
+                                        <constraint firstItem="7Yw-m3-uwV" firstAttribute="top" secondItem="xUI-bq-PYt" secondAttribute="top" id="mF4-0z-d1b"/>
+                                    </constraints>
+                                </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="completed" id="KGc-NQ-amb">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
@@ -67,84 +81,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1064.8" y="115.59220389805098"/>
-        </scene>
-        <!--Add Item View Controller-->
-        <scene sceneID="eXY-uH-8Q0">
-            <objects>
-                <viewController id="Jvt-8q-9mB" customClass="AddItemViewController" customModule="Grocery" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="wG3-y8-y06">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gtm-Fw-MEd">
-                                <rect key="frame" x="20" y="387" width="335" height="260"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grocery" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="diC-LG-RR5">
-                                        <rect key="frame" x="0.0" y="0.0" width="335" height="36"/>
-                                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="36" id="8PX-cw-i2Y"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
-                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Kbv-jv-Wyt">
-                                        <rect key="frame" x="0.0" y="36" width="335" height="224"/>
-                                        <subviews>
-                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C1s-O4-IKX">
-                                                <rect key="frame" x="0.0" y="0.0" width="335" height="224"/>
-                                                <color key="backgroundColor" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </pickerView>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                                <color key="backgroundColor" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstItem="diC-LG-RR5" firstAttribute="top" secondItem="Gtm-Fw-MEd" secondAttribute="top" id="YDn-yr-iJH"/>
-                                    <constraint firstAttribute="trailing" secondItem="diC-LG-RR5" secondAttribute="trailing" id="YcB-vr-ROk"/>
-                                    <constraint firstItem="Kbv-jv-Wyt" firstAttribute="leading" secondItem="Gtm-Fw-MEd" secondAttribute="leading" id="fJt-3c-DBd"/>
-                                    <constraint firstItem="diC-LG-RR5" firstAttribute="leading" secondItem="Gtm-Fw-MEd" secondAttribute="leading" id="fRm-pa-9ka"/>
-                                    <constraint firstItem="Kbv-jv-Wyt" firstAttribute="top" secondItem="diC-LG-RR5" secondAttribute="bottom" id="ozY-SC-3Nx"/>
-                                    <constraint firstAttribute="trailing" secondItem="Kbv-jv-Wyt" secondAttribute="trailing" id="rYC-Vp-aMo"/>
-                                    <constraint firstAttribute="bottom" secondItem="Kbv-jv-Wyt" secondAttribute="bottom" id="uZ0-Vk-re9"/>
-                                    <constraint firstAttribute="width" secondItem="Gtm-Fw-MEd" secondAttribute="height" multiplier="335:318" constant="61.100628930817606" id="v6b-BK-c7p"/>
-                                </constraints>
-                            </view>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="tcW-WL-FWT">
-                                <rect key="frame" x="20" y="65" width="335" height="29"/>
-                                <segments>
-                                    <segment title="Meat"/>
-                                    <segment title="Vegies"/>
-                                    <segment title="Fruits"/>
-                                    <segment title="Dairy"/>
-                                    <segment title="Seafood"/>
-                                </segments>
-                                <connections>
-                                    <action selector="segmentedButtonTapped:" destination="Jvt-8q-9mB" eventType="valueChanged" id="JQp-5i-NB3"/>
-                                </connections>
-                            </segmentedControl>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="tcW-WL-FWT" firstAttribute="top" secondItem="ecC-wC-FlR" secondAttribute="top" constant="45" id="A1Q-w6-KWa"/>
-                            <constraint firstItem="Gtm-Fw-MEd" firstAttribute="leading" secondItem="ecC-wC-FlR" secondAttribute="leading" constant="20" id="AXl-mp-Fui"/>
-                            <constraint firstItem="ecC-wC-FlR" firstAttribute="trailing" secondItem="Gtm-Fw-MEd" secondAttribute="trailing" constant="20" id="M1f-28-KE4"/>
-                            <constraint firstItem="ecC-wC-FlR" firstAttribute="bottom" secondItem="Gtm-Fw-MEd" secondAttribute="bottom" constant="20" id="Rqu-MF-CVU"/>
-                            <constraint firstItem="ecC-wC-FlR" firstAttribute="trailing" secondItem="tcW-WL-FWT" secondAttribute="trailing" constant="20" id="iBH-C8-7Pa"/>
-                            <constraint firstItem="tcW-WL-FWT" firstAttribute="leading" secondItem="ecC-wC-FlR" secondAttribute="leading" constant="20" id="mUk-sK-HfZ"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="ecC-wC-FlR"/>
-                    </view>
-                    <connections>
-                        <outlet property="pickerView" destination="C1s-O4-IKX" id="3ll-xd-aK1"/>
-                        <outlet property="pickerViewStackBottomConstraint" destination="Rqu-MF-CVU" id="bkY-2L-fCg"/>
-                        <outlet property="segmentedControl" destination="tcW-WL-FWT" id="bJw-TX-v1I"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lUE-Rq-fq2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1065" y="785"/>
         </scene>
         <!--Add Item View Controller-->
         <scene sceneID="015-Az-WDq">

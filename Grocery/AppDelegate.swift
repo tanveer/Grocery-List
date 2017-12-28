@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     private func updateRealmSchema() {
-        let config = Realm.Configuration(schemaVersion: 1)
+        let config = Realm.Configuration(schemaVersion: 5)
         Realm.Configuration.defaultConfiguration = config
     }
 }

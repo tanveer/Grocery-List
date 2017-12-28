@@ -8,4 +8,5 @@ target 'Grocery' do
   # Pods for Grocery
   pod 'RealmSwift'
   pod 'ObjectMapper'
+  pod 'DZNEmptyDataSet'
 end

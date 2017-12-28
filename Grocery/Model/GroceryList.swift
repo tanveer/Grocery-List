@@ -10,7 +10,6 @@ import Foundation
 import ObjectMapper
 
 class GroceryList: GroceryItem {
-
     var id: Int!
     var items: [String]!
     var type: String!

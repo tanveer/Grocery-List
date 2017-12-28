@@ -9,7 +9,6 @@
 import UIKit
 
 class  API {
-
     class func readJson(onSuccess: @escaping (GroceryItem) -> Void ) {
         let file = Bundle.main.path(forResource: "groceryData", ofType: "json")
         do {

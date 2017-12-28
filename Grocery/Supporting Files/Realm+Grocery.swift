@@ -35,4 +35,14 @@ class RealmData {
             assertionFailure(error.localizedDescription)
         }
     }
+
+    class func update<T: Object>(_ object: T) {
+        do {
+            try realm.write {
+                realm.add(object, update: true)
+            }
+        } catch {
+            assertionFailure(error.localizedDescription)
+        }
+    }
 }

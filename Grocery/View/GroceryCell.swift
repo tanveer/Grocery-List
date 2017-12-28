@@ -9,21 +9,21 @@
 import UIKit
 
 class GroceryCell: UITableViewCell {
-    var vmi: ViewModelItem? {
+    var viewGroceryItem: ViewGroceryItem? {
         didSet{
-            if let vmi = vmi {
-                itemLabel.text = vmi.item.name
+            if let viewGroceryItem = viewGroceryItem {
+                itemLabel.text = viewGroceryItem.item.name
             }
         }
     }
     
     @IBOutlet weak var itemLabel: UILabel!
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        accessoryType = selected ? .checkmark : .none
-    }
 }
+
+//    override func setSelected(_ selected: Bool, animated: Bool) {
+//        super.setSelected(selected, animated: animated)
+//        accessoryType = selected ? .checkmark : .none
+//    }
 
 extension GroceryCell {
     static var id: String {

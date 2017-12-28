@@ -10,8 +10,13 @@ import Foundation
 import RealmSwift
 
 @objcMembers class Item: Object {
-
     dynamic var name: String = ""
+
+    var isSelected: Bool!
+
+    func toggleIsSelected(_ selected: Bool) {
+        isSelected = selected
+    }
 
     override static func primaryKey() -> String? {
         return "name"
@@ -22,4 +27,3 @@ import RealmSwift
         self.name = name
     }
 }
-
